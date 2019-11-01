@@ -6,23 +6,23 @@ var firebase = require('firebase');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/teste', function(req, res, next) {
-  res.render('pag', { title: 'Express' });
+router.get('/cardapio', function(req, res, next) {
+  res.render('cardapio', { title: 'Express' });
 });
-router.get('/teste2', function(req, res, next) {
-  res.render('pag2', { title: 'Express' });
+router.get('/monte-sua-pizza', function(req, res, next) {
+  res.render('montesuapizza', { title: 'Express' });
 });
-router.get('/teste3', function(req, res, next) {
-  res.render('pag3', { title: 'Express' });
+router.get('/galeria', function(req, res, next) {
+  res.render('galeria', { title: 'Express' });
 });
-router.get('/teste4', function(req, res, next) {
-  res.render('pag4', { title: 'Express' });
+router.get('/historia', function(req, res, next) {
+  res.render('historia', { title: 'Express' });
 });
-router.get('/teste5', function(req, res, next) {
-  res.render('pag5', { title: 'Express' });
+router.get('/promocoes', function(req, res, next) {
+  res.render('promocoes', { title: 'Express' });
 });
-router.get('/teste6', function(req, res, next) {
-  res.render('pag6', { title: 'Express' });
+router.get('/beneficios-da-pizza', function(req, res, next) {
+  res.render('beneficiosdapizza', { title: 'Express' });
 });
 router.post('/login', function(req, res, next) {
   const userData = req.body.user;
