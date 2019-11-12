@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var firebase = require('firebase');
+const User = require('../models/user');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -23,6 +24,19 @@ router.get('/promocoes', function(req, res, next) {
 });
 router.get('/beneficios-da-pizza', function(req, res, next) {
   res.render('beneficiosdapizza', { title: 'Benefícios da pizza' });
+});
+router.get('/cadastro', function(req, res, next) {
+  res.render('cadastro', { title: 'Express' });
+});
+router.post('/cadastro', function(req, res, next) {
+  const user = req.body.user;
+  User.create(user).then((id)=>{
+    res.redirect('/galeria');
+    console.log(id);
+  }).catch((error) => {
+    console.log(error);
+    res.redirect('/error');
+  });
 });
 router.post('/login', function(req, res, next) {
   const userData = req.body.user;
