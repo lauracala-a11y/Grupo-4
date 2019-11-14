@@ -12,9 +12,11 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const mongoose = require('mongoose');
 const app = express();
-/**
- *  Database setup
- */
+
+// mongoose.connect('mongodb+srv://giovannasouza:<eumesma>@cluster0-j3g3e.mongodb.net/test?retryWrites=true&w=majority', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// });
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_SERVER}/${process.env.MONGO_DATABASE}?${process.env.MONGO_OPTIONS}`);
 mongoose.connection.on('error', console.error.bind(console, 'connection error: '));
 mongoose.connection.once('open', () => {
