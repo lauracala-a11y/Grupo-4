@@ -8,16 +8,16 @@ const userSchema = new mongoose.Schema({
     type: String,
     lowercase: true
   },
-  //cpf: Number,
-  // adress: {
-  //   street: String,
-  //   number: Number
-  // }
-  // card: {
-  //   numberc: Number,
-  //   cvv: Number
-  // },
-  // password: String
+  cpf: Number,
+  adress: {
+  street: String,
+  number: Number
+  },
+  card: {
+  numberc: Number,
+  cvv: Number
+  },
+  password: String
 
 }, { timestamps: true, static: false });
 
