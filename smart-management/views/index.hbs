@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <link href="/styles.css" rel=stylesheet>
     <meta charset="utf-8">
     <style>
     .log{
       font-size: 20px;
+    }
+    .Foto1,.Foto2,.Foto3,.Foto4{
+      box-shadow:5px 5px 20px;
     }
     body{
       text-align: center;
@@ -13,7 +22,18 @@
       font-family: Arial Unicode MS;    }
 
     body{
-      background-color: white;
+
+        font-family: Arial Unicode MS;
+
+        background: #73FF7D;
+        background: -moz-linear-gradient(top, #73FF7D 0%, #FFFFFF 50%, #FF4B36 100%);
+        background: -webkit-linear-gradient(top, #73FF7D 0%, #FFFFFF 50%, #FF4B36 100%);
+        background: linear-gradient(to bottom, #73FF7D 0%, #FFFFFF 50%, #FF4B36 100%);
+        font-family: courier, monospace;
+    }
+    .navbar{
+      /* font-family: Arial Unicode MS; */
+      font-size: 20px;
     }
 
     .footer{
@@ -43,20 +63,202 @@
       <img src="images/linha.jpg" width="1165px" height="3px"><br>
 
 <center>
-    <p><div class="button">
+    <!-- <p><div class="button">
       <span>&emsp;</span>
       <a href="/historia"><button type="button" class="btn btn-success">História</button></a><span>&emsp;</span>
       <a href="/galeria"><button type="button" class="btn btn-success">Galeria</button></a><span>&emsp;</span>
       <a href="/cardapio"><button type="button" class="btn btn-success">Cardápio</button></a><span>&emsp;</span>
       <a href="/promocoes"><button type="button" class="btn btn-success">Promoções</button></a><span>&emsp;</span>
       <a href="/beneficios-da-pizza"><button type="button" class="btn btn-success">Benefícios da Pizza</button></a><span>&emsp;</span>
-    </div></p>
+    </div></p> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <p id="montesuapizza" class="text" >Monte sua Pizza</p>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(Página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#historia">História</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#galeria">Galeria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#promocoes">Promoções</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#beneficiosdapizza">Benefícios da Pizza</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#cardapio" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cardápio
+        </a><div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Monte sua Pizza</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
     <br />
     <br />
     <br />
     <br />
     <br />
     <br />
+    <h1><strong>História da Pizzaria</strong></h1>
+    <p id="historia" class="text" >História da pizza</p>
+    <br />
+    <div class="fotoshistoria">
+      <img class="Foto1" src="images/historia1.png" alt="Foto1" height="300" width="449">
+      <span>&emsp;</span>
+      <img class="Foto2" src="images/historia2.png" alt="Foto2" height="300" width="449">
+    </div>
+    <br />
+    <p align="justify"> A família Píton veio ao Brasil em 1938, em um navio lotado de imigrantes italianos. Na época, a família Píton se instalou em Belo Horizonte.
+Naqueles tempos, a máfia italiana comandava o crime em Beagá, e o avô Píton era o GodFather. Ele usava a Pítons Pizza para lavar seu dinheiro provindo do tráfico de papoula. </p>
+    <p align="justify"> Contudo, em um ato de coragem, Vó Carolina expulsou os integrantes da balbúrdia de Belo Horizonte e legalizou as atividades da pizzaria. Desde então, somos reconhecidos pela qualidade de nossas pizzas realmente italianas e pela cordialidade de quem trabalha na nossa unidade. </p>
+    <p align="justify"> Estamos com 2 estrelas Michelin e ganhamos o prêmio da Veja e do TripAdvisor de melhor casa de Pizza da América Latina. </p>
+    <br />
+    <br />
+    <br />
+    <p id="galeria" class="text" >Galeria</p>
+    <div class="container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <img class="Foto1" src="images/galeria1.png" alt="Foto1"  style="width:40%">
+          <div class="carousel-caption">
+            <h3>Karen Píton</h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="Foto2" src="images/galeria2.png" alt="Foto2" style="width:40%">
+          <div class="carousel-caption">
+            <h3>Karen Píton</h3>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="Foto3" src="images/galeria3.png" alt="Foto3" style="width:60%">
+          <div class="carousel-caption">
+            <h3>Barack Obama</h3>
+            <p>Um dos nossos clientes</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="Foto4" src="images/galeria4.png" alt="Foto4" style="width:60%">
+          <!-- <img src="ny.jpg" alt="New York" style="width:100%;"> -->
+          <div class="carousel-caption">
+            <h3>Gisele Budchen</h3>
+            <p>Outra cliente</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <center>
+
+    <img src="images/linha.jpg" width="700px" height="1px">
+    <p></p>
+    <h1 text align="center"><font size="9" face="Euphemia"> Cardápio </font></h1>
+    <p id="cardapio" class="text" >Cardápio</p>
+    <img src="images/linha.jpg" width="700px" height="1px">
+
+    <font size="2" face="Microsoft Sans Serif" color="black">
+    <p><button class="btn btn-link btn-lg btn-block" ><a href="http://localhost:3000/monte-sua-pizza">MONTE SUA PIZZA</a></button></p>
+    <div>
+      <img src="images/Cardapio.png" width="664px" height="976px">
+    </div>
+    </font>
+    <br />
+    <br />
+    <br />
+    <br />
+  <h1><strong>Promoções</strong></h1>
+  <p id="promocoes" class="text" >Promoções</p>
+    <h4>Segundas- feiras:</h4>
+      <p>- 2 pizzas grandes pelo preço de duas m</p>
+    <h4>Terças- feiras:</h4>
+      <p>- Chop grátis a cada pizza média</p>
+    <h4>Quarta-feiras:</h4>
+      <p>- 3 fatias pelo preço de duas</p>
+    <h4>Quinta-feiras:</h4>
+      <p>- Pizza em dobro! Compre uma grande e ganhe a segunda</p>
+    <h4>Sexta-feiras:</h4>
+      <p>- Dois chops pelo preço de um</p>
+    <h4>Sábados</h4>
+      <p>- Monte sua pizza com frete grátis</p>
+    <h4>Domingos</h4>
+      <p>- Domingos da Pítons: Pizza doce a vontade! Dietas só a partir de segundas-feiras</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1><strong>Benefícios da Pizza</strong></h1>
+      <p id="beneficiosdapizza" class="text" >Benefícios da Pizza</p>
+      <br />
+      <div class="fotosbenpizza">
+        <img class="Foto1" src="images/benpizza1.png" alt="Foto1" height="300" width="449">
+        <span>&emsp;</span>
+        <img class="Foto2" src="images/benpizza2.png" alt="Foto2" height="300" width="449">
+      </div>
+      <br />
+      <p align="justify">A <b>pizza</b> é um dos alimentos mais amados do mundo. Nós todos sabemos como é deliciosa, é hora de saber o quão <b>saudável</b> uma <b>pizza</b> pode ser para você. Vamos citar alguns dos <b>benefícios de comer uma pizza para a saúde</b>.</p>
+      <br/ >
+      <dl>
+        <dt>1. A massa</dt>
+        <dd align="justify">A <b>massa da pizza</b> pode ser <b>extremamente saudável</b>. É muito <b>rica em antioxidantes</b>, e se você usar as técnicas de cozimento corretas, você pode realmente aumentar os <b>antioxidantes na massa</b>. Vai ser extremamente benéfico se você optar por uma <b>massa de trigo</b>. Ele não só tem <b>fibras</b>, <b>carboidratos complexos</b>, e <b>nutrientes essenciais</b>, mas também <b>ajuda na estabilização do metabolismo</b>.</dd>
+        <br/ >
+        <dt>2. O molho</dt>
+        <dd align="justify">O <b>molho</b> é um dos principais componentes de uma pizza. Um dos principais ingredientes de um <b>molho de pizza</b> é o <b>tomate</b>. Rico em <b>licopeno</b>, o tomate ajudá no <b>combate do câncer</b>. Eles também têm <b>vitamina C</b>, que ajuda a impulsionar o <b>sistema imunológico</b>. Como a maioria dos molhos de pizza tem o <b>alho</b>, você começa a usufruir dos benefícios da <b>vitamina B6</b>, <b>vitamina C</b> e <b>manganês</b>, que tem <b>propriedades anticancerígenas</b>. Outro componente de um molho de pizza é o <b>azeite</b>. Ele ajuda na redução do colesterol ruim e lhe dá uma dose de <b>óleos graxos ricos em energia</b>. Com <b>ervas</b> como <b>manjericão</b> e <b>orégano</b>, o molho lhe da cargas de <b>vitamina K e fibras</b>.</dd>
+        <br/ >
+        <dt>3. O queijo</dt>
+        <dd align="justify">Muitas pessoas consideram a <b>pizza saudável</b>, uma vez que possui uma grande quantidade de <b>queijo</b>. O queijo é extremamente rico em <b>cálcio</b>, que deixam os ossos mais fortes e ajuda na <b>prevenção da osteoporose</b>. Também é rico em <b>proteínas</b>. Tudo que você precisa fazer é ser um pouco cauteloso na <b>quantidade</b> e no <b>tipo de queijo</b> que você vai colocar na sua pizza. Esteja ciente do <b>teor de gordura do queijo</b>. Escolha sabiamente entre o <b>queijo de leite integral</b>, queijo de <b>cabra</b> ou queijo de <b>leite desnatado</b>.</dd>
+        <br/ >
+        <dt>4. Os recheios</dt>
+        <dd align="justify">Se você optar por uma <b>pizza</b> que tem <b>verduras</b> como recheio, então ela pode ser muito saudável para você. Os <b>vegetais verdes</b>, como <b>espinafre</b>, <b>pimentão verde</b> e <b>espargos</b> são extremamente <b>ricos em antioxidantes</b>. Outro popular recheio para pizzas são os <b>cogumelos</b>. Eles são <b>agentes de combate ao câncer</b> e têm um teor muito elevado de água. Não só isso, os cogumelos possuem <b>baixo teor de sódio</b>, <b>gordura</b> e <b>contagem de calorias</b>. Eles também ajudam na <b>regulação do seu nível de açúcar</b> no sangue. O <b>abacaxi</b> é outro recheio preferido para uma <b>pizza doce</b>. É extremamente <b>benéfico para os ossos e dentes</b>. Além disso, se você gosta de <b>pizza de carne</b>, então você vai ter uma grande dose de <b>proteína</b> e <b>ferro</b>.</dd>
+        <br/ >
+        <dt>5. A variedade</dt>
+        <dd align="justify">A melhor parte de uma <b>pizza</b> é que você pode <b>controlar todos os ingredientes</b> que vão nela. Se você gosta de fazer <b>pizzas em casa</b>, então você tem uma grande vantagem, assim você pode <b>usar o tipo de massa que quiser</b>, <b>fazer o tipo de molho que você considera mais saudável</b>, adicionar o queijo de acordo com a quantidade que deseja, e desfrute de <b>infinitas opções de recheio</b>. Em suma, você pode fazer uma <b>pizza tão saudável quanto você queira</b>.</dd>
+      </dl>
+      <br />
+      <br />
+      <br />
+      <br />
+
+
     <form class="log" action="/login" method="post">
 
       <p><label>E-mail</label><br />
